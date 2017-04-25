@@ -1,0 +1,27 @@
+{
+  "name": "bank-ocr-kata",
+  "version": "0.0.1",
+  "description": "",
+  "bin": "./bin/bank-ocr-kata",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "test-runner": "mocha",
+    "test": "npm run lint && npm run test-runner"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rosston/bank-ocr-kata.git"
+  },
+  "author": "Ross Brandes",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/rosston/bank-ocr-kata/issues"
+  },
+  "homepage": "https://github.com/rosston/bank-ocr-kata#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.3.0",
+    "standard": "^10.0.2"
+  }
+}

@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+'use strict'
+
+const fs = require('fs')
+const parseNumbers = require('../lib/parse-numbers')
+
+const USAGE_TEXT = `
+Usage:
+\tbank-ocr-kata <path_to_ocr_file>
+`
+
+process.exit(main(...process.argv.slice(2)))
+
+function main (filePath) {
+  if (!filePath) {
+    console.log(USAGE_TEXT)
+    return 1
+  }
+
+  const fileContents = fs.readFileSync(filePath, 'utf8')
+  console.log(parseNumbers(fileContents).join('\n'))
+  return 0
+}
